@@ -10,7 +10,7 @@
     plocate
     rsync
     tldr
-    wget 
+    wget
     wlr-randr
     xstow
     zip
