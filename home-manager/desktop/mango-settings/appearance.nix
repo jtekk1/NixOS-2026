@@ -1,0 +1,45 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # Effects
+    blur=1
+    blur_layer=0
+    blur_optimized=1
+    blur_params_num_passes=3
+    blur_params_radius=5
+    blur_params_noise=0.09
+    blur_params_brightness=0.9
+    blur_params_contrast=0.9
+    blur_params_saturation=1.9
+
+    # Shadows
+    shadows=1
+    shadow_only_floating=0
+    layer_shadows=1
+    shadows_size=10
+    shadows_blur=15
+    shadows_position_x=10
+    shadows_position_y=10
+    shadowscolor=0x000000ff
+
+    # Opacity (Transperency)
+    focused_opacity=1.0
+    unfocused_opacity=0.85
+
+    # Borders
+    border_radius=10
+    no_radius_when_single=0
+    borderpx=3
+
+    # Gaps
+    gappih=20
+    gappiv=20
+    gappoh=20
+    gappov=15
+
+    # Scratchpad 
+    scratchpad_width_ratio=0.8
+    scratchpad_height_ratio=0.9
+  '';
+}

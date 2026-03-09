@@ -1,0 +1,135 @@
+/*
+@define-color bg1 #478061;
+@define-color bg2 #1b2620;
+@define-color bg3 #244031;
+@define-color fg1 #FFFFFF;
+@define-color fg2 #ffffff;
+@define-color fg3 #ffffff;
+*/
+
+/* points to $HOME/.local/Themes/curent/waybar.css */
+@import "../../.config/ThemeSwitcher/current/waybar.css";
+
+* {
+  font-family:
+    CaskaydiaCove Nerd Font,
+    FontAwesome,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  border: none;
+  font-size: 16px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+.modules-center {
+  border: 2px solid shade(alpha(@bg3, 1), 1.1);
+  background: linear-gradient(
+    90deg,
+    shade(alpha(@bg1, 0.9), 0.8) 0%,
+    shade(alpha(@bg2, 0.9), 0.8) 33%,
+    shade(alpha(@bg2, 0.9), 0.8) 66%,
+    shade(alpha(@bg1, 0.9), 0.8) 100%
+  );
+  padding: 6px 12px;
+  border-radius: 28px;
+  box-shadow: none;
+}
+
+.modules-left,
+.modules-right {
+  margin: 0 12px;
+}
+
+#workspaces {
+  background: transparent;
+  padding: 0 5px;
+  margin: 0 5px 0 5px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  box-shadow: none;
+  color: @fg1;
+  font-weight: 900;
+}
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 0px 2px;
+  border-radius: 16px;
+  background: transparent;
+  color: @fg1;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background-color: @bg3;
+  color: @fg3;
+}
+
+#workspaces button.active {
+  background: linear-gradient(
+    90deg,
+    shade(alpha(@bg3, 1), 0.7) 0%,
+    shade(alpha(@bg3, 1), 1.0) 50%,
+    shade(alpha(@bg3, 1), 0.7) 100%
+  );
+  border: 2px solid @bg2;
+  color: @fg2;
+  min-width: 50px;
+  transition: all 0.65s ease-in-out;
+}
+
+#workspaces button.hidden {
+  color: alpha(@fg1, 0.3);
+  font-weight: 300;
+}
+
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#custom-left-cap,
+#custom-right-cap,
+#custom-monitor-toggle,
+#custom-power,
+#custom-weather,
+#custom-updates,
+#disk,
+#idle_inhibitor,
+#memory,
+#network,
+#temperature,
+#tray,
+#window,
+#wireplumber {
+  background-color: transparent;
+  color: @fg1;
+  padding: 0 2px;
+  margin: 0 6px;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+#custom-left-cap,
+#custom-right-cap {
+  font-size: 22px;
+}
+
+menu {
+    border-radius: 5px;
+    background: @bg1;
+    color: @fg3;
+}
+
+menuitem {
+    border-radius:15px;
+    padding: 3px;
+}

@@ -1,0 +1,16 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # Basic Tag Rules
+    tagrule=id:1,layout_name:tgmix
+    tagrule=id:2,layout_name:tgmix
+    tagrule=id:3,layout_name:tgmix
+    tagrule=id:4,layout_name:tgmix
+    tagrule=id:5,layout_name:tgmix
+    tagrule=id:6,layout_name:tgmix
+    tagrule=id:7,layout_name:tgmix 
+    tagrule=id:8,layout_name:tgmix
+    tagrule=id:9,layout_name:tgmix
+  '';
+}

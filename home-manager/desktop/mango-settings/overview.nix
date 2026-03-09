@@ -1,0 +1,12 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # Overview Setting
+    hotarea_size=10
+    enable_hotarea=0
+    ov_tab_mode=1
+    overviewgappi=15
+    overviewgappo=30
+  '';
+}

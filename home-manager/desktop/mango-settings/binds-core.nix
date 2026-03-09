@@ -1,0 +1,11 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # Core actions
+    bind=SUPER+CTRL,r,reload_config
+    bind=SUPER+ALT,m,quit
+    bind=SUPER+SHIFT,Return,spawn,foot -c $HOME/.config/ThemeSwitcher/current/foot.ini
+    bind=SUPER,Return,spawn,kitty
+  '';
+}

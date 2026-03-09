@@ -1,0 +1,34 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # App shortcuts
+    bind=SUPER,slash,spawn,bitwarden
+    bind=SUPER,b,spawn,kitty -T BTOP btop
+    bind=SUPER,c,spawn,cursor
+    bind=SUPER,f,spawn,kitty -T SPF yazi
+    bind=SUPER+SHIFT,f,spawn,kitty -T SPF spf
+    bind=SUPER,h,spawn,kitty -T HTOP htop -C
+    bind=SUPER,l,spawn,kitty -T LAZYGIT lazygit
+    bind=SUPER,m,spawn,spotify
+    bind=SUPER+CTRL,n,spawn,kitty -T IMPALA impala
+    bind=SUPER,n,spawn,kitty -T NEOVIM nvim
+    bind=SUPER,o,spawn,obsidian
+    bind=SUPER,t,spawn,chromium
+    bind=SUPER,x,spawn,kitty claude
+
+    # Webapp shortcuts
+    bind=SUPER+SHIFT,a,spawn,chromium --app=https://www.audible.com
+    bind=SUPER+SHIFT,c,spawn,chromium --app=https://claude.ai
+    bind=SUPER+SHIFT,d,spawn,chromium --app=https://discord.com
+    bind=SUPER+SHIFT,g,spawn,chromium --app=https://gemini.google.com/gem/a2e9c5b0e7e1
+    bind=SUPER+SHIFT,h,spawn,chromium --app=https://www.hbomax.com
+    bind=SUPER+SHIFT,i,spawn,chromium --app=https://www.instagram.com
+    bind=SUPER+SHIFT,m,spawn,chromium --app=https://mail.zoho.com
+    bind=SUPER+SHIFT,n,spawn,chromium --app=https://netflix.com
+    bind=SUPER+SHIFT,o,spawn,chromium --app=https://chatgpt.com
+    bind=SUPER+SHIFT,u,spawn,chromium --app=https://upwork.com
+    bind=SUPER+SHIFT,y,spawn,chromium --app=https://youtube.com
+    bind=CTRL+SHIFT,space,spawn,chromium --app=https://www.nerdfonts.com/cheat-sheet
+  '';
+}

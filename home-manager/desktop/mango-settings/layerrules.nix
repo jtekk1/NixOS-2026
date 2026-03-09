@@ -1,0 +1,11 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # Layer Rules
+    layerrule=layer_name:notifications,animation_type_open:fade,animation_type_close:fade,noblur:0,noshadow:0,noanim:0
+    layerrule=layer_name:wofi,animation_type_open:fade,animation_type_close:fade,noblur:0,noshadow:0,noanim:0
+    layerrule=layer_name:swayosd,animation_type_open:fade,animation_type_close:fade,noblur:0,noshadow:0,noanim:0
+    layerrule=layer_name:waybar,animation_type_open:fade,animation_type_close:fade,noblur:0,noshadow:0,noanim:0
+  '';
+}

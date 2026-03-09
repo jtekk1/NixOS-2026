@@ -1,0 +1,48 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # Animation Configuration
+
+    # Enable
+    animations=1
+    layer_animations=1
+
+    # Animation Durations (in MS)
+    animation_duration_open=150
+    animation_duration_close=150
+    animation_duration_tag=150
+    animation_duration_move=150
+    animation_duration_focus=150
+
+    # Style (zoom, slide, fade, none)
+    animation_type_open=fade
+    animation_type_close=fade
+    layer_animation_type_open=slide
+    layer_animation_type_close=slide
+
+    # Fade Settings (requried if Style set to Fade)
+    animation_fade_in=1
+    animation_fade_out=1
+    fadein_begin_opacity=0.1
+    fadeout_begin_opacity=1.0
+
+    # Zoom Settings (required if Style set to Zoom)
+    zoom_initial_ratio=0.1
+    zoom_end_ratio=0.1
+
+    # Animation Curves
+    # https://www.cssportal.com/css-cubic-bezier-generator/
+    animation_curve_open=0.77, 0.00, 0.17, 1.00
+    animation_curve_move=0.77, 0.00, 0.17, 1.00
+    animation_curve_tag=0.77, 0.00, 0.17, 1.00
+    animation_curve_close=0.77, 0.00, 0.17, 1.00
+    animation_curve_focus=0.77, 0.00, 0.17, 1.00
+    animation_curve_opafadein=0.77, 0.00, 0.17, 1.00
+    animation_curve_opafadeout=0.77, 0.00, 0.17, 1.00
+
+    # Tag Animation
+    # 1 = horizontal 0 = vertical
+    tag_animation_direction=0
+  '';
+}

@@ -1,0 +1,15 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    # Master-Stack Layout Setting
+    new_is_master=0
+    default_mfact=0.55
+    default_nmaster=1
+    smartgaps=1
+
+    # center_tile only
+    center_master_overspread=0
+    center_when_single_stack=0
+  '';
+}

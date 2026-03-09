@@ -1,0 +1,8 @@
+{ ... }:
+
+{
+  wayland.windowManager.mango.settings = ''
+    switchbind=fold,spawn,wlr-randr --output eDP1 --off
+    switchbind=unfold,spawn,wlr-rand --output eDP1 --on
+  '';
+}
