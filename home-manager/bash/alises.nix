@@ -22,6 +22,7 @@
       fzfp = "fzf --preview 'bat --style=numbers --color=always {}'";
       ff = "fastfetch";
       decompress = "tar -xzf";
+      nix-cleanup = "nix-collect-garbage -d && sudo nix-collect-garbage -d && nix-store --optimise && sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +5 && rm -rf ~/.cache/nix && sudo journalctl --vacuum-time=7d";
 
     };
   };
