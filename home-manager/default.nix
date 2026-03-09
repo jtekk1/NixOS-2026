@@ -6,7 +6,6 @@
     ./desktop
     ./scripts
     ./software
-    ./common.nix
     ./user.nix
   ];
 }
