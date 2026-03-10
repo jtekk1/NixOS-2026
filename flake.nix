@@ -29,16 +29,22 @@
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
       self,
-      nixpkgs,
       disko,
-      nixos-hardware,
-      mango,
       home-manager,
+      mango,
+      nixos-hardware,
+      nixpkgs,
+      nixvim,
       ...
     }@inputs:
 

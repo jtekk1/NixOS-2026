@@ -1,4 +1,4 @@
- { pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -6,6 +6,6 @@
     ./code-editors.nix
     ./containers.nix
     ./git.nix
-    ./neovim.nix
+    ./nixvim
   ];
 }
