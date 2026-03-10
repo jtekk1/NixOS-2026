@@ -1,4 +1,4 @@
-{ config, pkgs, libs, ... }:
+{ pkgs, ... }:
 
 # AMD GPU Compute Support (ROCm)
 # This module provides the ROCm stack for GPU compute workloads (AI/ML, OpenCL, HIP)
@@ -18,9 +18,9 @@
     rocmPackages.rocminfo
 
     # Compute libraries (for AI/ML workloads)
-    rocmPackages.tensile
-    rocmPackages.hipblaslt
-    rocmPackages.rocm-device-libs
+    # rocmPackages.tensile
+    # rocmPackages.hipblaslt
+    # rocmPackages.rocm-device-libs
 
     radeontop
     corectrl
