@@ -123,11 +123,14 @@
       lualine.enable = true;
       bufferline.enable = true;
       noice.enable = true;
+      web-devicons.enable = true;
 
       neo-tree = {
         enable = true;
-        closeIfLastWindow = true;
-        window.position = "left";
+        settings = {
+          closeIfLastWindow = true;
+          window.position = "left";
+        };
       };
 
       ###################################################
