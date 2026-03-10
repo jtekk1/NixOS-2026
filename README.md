@@ -12,8 +12,8 @@ Re-creating my NixOS setup.
 
 ## Todo
 
-[ ] - Switch from NeoVim to NixVim
-[ ] - migrate over my home lab configs
-[ ] - add Tekk-Wallpapers directly to `assets`
-[ ] - add nix module for theme switcher
+[x] Switch from NeoVim to NixVim
+[] migrate over my home lab configs
+[] add Tekk-Wallpapers directly to `assets`
+[] add nix module for theme switcher
 :
