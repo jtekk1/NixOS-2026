@@ -74,31 +74,31 @@
       }
 
       #lock {
-          background-image: image(url("/home/jtekk/NixOS/dots/wlogout/lock.png"));
+          background-image: image(url("/home/jtekk/NixOS/assets/wlogout/lock.png"));
       }
 
       #logout {
-          background-image: image(url("/home/jtekk/NixOS/dots/wlogout/logout.png"));
+          background-image: image(url("/home/jtekk/NixOS/assets/wlogout/logout.png"));
       }
 
       #logout:hover {
-          background-image: image(url("/home/jtekk/NixOS/dots/wlogout/logout.png"));
+          background-image: image(url("/home/jtekk/NixOS/assets/wlogout/logout.png"));
       }
 
       #suspend {
-          background-image: image(url("/home/jtekk/NixOS/dots/wlogout/sleep.png"));
+          background-image: image(url("/home/jtekk/NixOS/assets/wlogout/sleep.png"));
       }
 
       #shutdown {
-          background-image: image(url("/home/jtekk/NixOS/dots/wlogout/power.png"));
+          background-image: image(url("/home/jtekk/NixOS/assets/wlogout/power.png"));
       }
 
       #reboot {
-          background-image: image(url("/home/jtekk/NixOS/dots/wlogout/restart.png"));
+          background-image: image(url("/home/jtekk/NixOS/assets/wlogout/restart.png"));
       }
 
       #hibernate {
-          background-image: image(url("/home/jtekk/NixOS/dots/wlogout/hibernate.png"));
+          background-image: image(url("/home/jtekk/NixOS/assets/wlogout/hibernate.png"));
       }
     '';
   };

@@ -5,7 +5,7 @@
     limine = {
       enable = true;
       style = {
-        wallpapers = [ ../dots/limine/wallpaper ];
+        wallpapers = [ ../assets/limine/wallpaper ];
         wallpaperStyle = "centered";
       };
       extraConfig = ''
