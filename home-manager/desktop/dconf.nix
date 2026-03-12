@@ -15,8 +15,8 @@
       package = pkgs.gnome-themes-extra;
     };
     iconTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
+      name = "candy-icons";
+      package = pkgs.candy-icons;
     };
     font = {
       name = "Adwaita Sans";
@@ -48,8 +48,8 @@
     platformTheme.name = "gtk";
 
     style = {
-      name = "adwaita-dark";
-      package = pkgs.adwaita-qt;
+      name = "gtk";
+      #package = pkgs.adwaita-qt;
     };
   };
 

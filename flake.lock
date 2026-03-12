@@ -101,6 +101,26 @@
         "type": "github"
       }
     },
+    "nix-bloom": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1766692752,
+        "narHash": "sha256-S7jcSJ2HNgiuVsmNigNCmwqlXxYA5cX+kgr5CINzWj0=",
+        "owner": "FirPic",
+        "repo": "nix-bloom",
+        "rev": "81b5f6b829b8cb4b95c106326adb8aeb82ce81ea",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FirPic",
+        "repo": "nix-bloom",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1772972630,
@@ -191,6 +211,7 @@
         "disko": "disko",
         "home-manager": "home-manager",
         "mango": "mango",
+        "nix-bloom": "nix-bloom",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",

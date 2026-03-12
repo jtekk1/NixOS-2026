@@ -1,10 +1,13 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   boot = {
 
     consoleLogLevel = 0;
-    initrd.verbose = false;
+    initrd = {
+      verbose = false;
+      systemd.enable = true;
+    };
     kernelParams = [
       "quiet"
       "splash"
@@ -33,7 +36,7 @@
     plymouth = {
       enable = true;
       logo = "${pkgs.nixos-icons}/share/icons/hicolor/48x48/apps/nix-snowflake-white.png";
-      theme = "darth_vader";
+      theme = "nix-bloom";
       themePackages = with pkgs; [
         (adi1090x-plymouth-themes.override {
           selected_themes = [
@@ -43,6 +46,7 @@
             "tech_b"
           ];
         })
+        inputs.nix-bloom.packages.${pkgs.system}.default
       ];
     };
   };

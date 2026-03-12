@@ -34,6 +34,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-bloom = {
+      url = "github:FirPic/nix-bloom";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
