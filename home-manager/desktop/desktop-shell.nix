@@ -14,7 +14,6 @@
     playerctl
     shotman
     slurp
-    sway-audio-idle-inhibit
     swaybg
     swww
     udiskie

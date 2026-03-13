@@ -12,6 +12,7 @@
     ./mango.nix
     ./mango-settings
     ./superfile.nix
+    ./sway-audio-idle-inhibit.nix
     ./swayidle.nix
     ./swaylock.nix
     ./swayosd.nix
