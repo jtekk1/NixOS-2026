@@ -62,45 +62,33 @@
       wayland_titlebar_color = "system";
       linux_display_server = "wayland";
       wayland_enable_ime = true;
+
+      # --- MAC --- #
+      mac_option_as_alt = "yes";
+      term = "xterm-kitty";
+      scrollback_pager = ''nvim -c "set signcolumn=no showtabline=0" -c "silent write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "'';
+
+      # -- Split Navigation --- #
+      allow_remote_control= true;
+      listen_on = "unix:/tmp/mykitty";
+      enabled_layouts = "splits";
+
+
+    };
+    
+    keybindings = {
+      # Open a vertical split (side-by-side)
+      "cmd+d" = "launch --location=vsplit";
+      "alt+d" = "launch --location=vsplit";
+
+      # Open a horizontal split (top-and-bottom)
+      "cmd+shift+d" = "launch --location=hsplit";
+      "alt+shift+d" = "launch --location=hsplit";
+
+      # Close the current split
+      "cmd+w" = "close_window";
+      "alt+w" = "close_window"
     };
   };
 }
 
-
-#######################
-# --- MAC OPTIONS --- #
-#######################
-
-mac_option_as_alt               yes
-term                            xterm-kitty
-scrollback_pager                nvim -c "set signcolumn=no showtabline=0" -c "silent write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
-
-###########################################################
-# SEAMLESS SPLIT NAVIGATION (Vim-Kitty-Navigator)
-###########################################################
-
-allow_remote_control                      yes
-listen_on                                 unix:/tmp/mykitty
-map ctrl+j kitten pass_keys.py bottom     ctrl+j
-map ctrl+k kitten pass_keys.py top        ctrl+k
-map ctrl+h kitten pass_keys.py left       ctrl+h
-map ctrl+l kitten pass_keys.py right      ctrl+l
-
-###########################################################
-# WINDOW SPLITTING (Splits Layout)
-###########################################################
-
-# Set the splits layout as the default
-enabled_layouts                           splits
-
-# Open a vertical split (side-by-side)
-map cmd+d launch --location=vsplit
-map alt+d launch --location=vsplit
-
-# Open a horizontal split (top-and-bottom)
-map cmd+shift+d launch --location=hsplit
-map alt+shift+d launch --location=hsplit
-
-# Optional: Close the current split with cmd+w (standard Mac behavior)
-map cmd+w close_window
-map alt+w close_window
