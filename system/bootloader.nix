@@ -1,10 +1,13 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   boot = {
 
     consoleLogLevel = 0;
-    initrd.verbose = false;
+    initrd = {
+      verbose = false;
+      systemd.enable = true;
+    };
     kernelParams = [
       "quiet"
       "splash"
@@ -43,6 +46,7 @@
             "tech_b"
           ];
         })
+        inputs.nix-bloom.packages.${pkgs.system}.default
       ];
     };
   };

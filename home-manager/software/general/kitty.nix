@@ -62,6 +62,33 @@
       wayland_titlebar_color = "system";
       linux_display_server = "wayland";
       wayland_enable_ime = true;
+
+      # --- MAC --- #
+      mac_option_as_alt = "yes";
+      term = "xterm-kitty";
+      scrollback_pager = ''nvim -c "set signcolumn=no showtabline=0" -c "silent write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "'';
+
+      # -- Split Navigation --- #
+      allow_remote_control= true;
+      listen_on = "unix:/tmp/mykitty";
+      enabled_layouts = "splits";
+
+
+    };
+    
+    keybindings = {
+      # Open a vertical split (side-by-side)
+      "cmd+d" = "launch --location=vsplit";
+      "alt+d" = "launch --location=vsplit";
+
+      # Open a horizontal split (top-and-bottom)
+      "cmd+shift+d" = "launch --location=hsplit";
+      "alt+shift+d" = "launch --location=hsplit";
+
+      # Close the current split
+      "cmd+w" = "close_window";
+      "alt+w" = "close_window"
     };
   };
 }
+

@@ -13,7 +13,7 @@
     # --- Wayland & Compositor --- #
     LIBSEAT_BACKEND = "logind";
     QT_QPA_PLATFORM = "Wayland;xcb";
-    QT_STYLE_OVERRIDE = "adwaita-dark";
+    QT_STYLE_OVERRIDE = "gtk";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     WLR_RENDERER = "vulkan";
     # WLR_NO_HARDWARE_CURSORS=1;

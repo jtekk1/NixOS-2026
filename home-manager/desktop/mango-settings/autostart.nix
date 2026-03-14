@@ -7,6 +7,5 @@
     exec-once=wl-paste --type text --watch cliphist store
     exec-once=wl-paste --type image --watch cliphist store
     exec-once=xrdb -merge ~/.Xresources
-    exec-once=sway-audio-idle-inhibit
   '';
 }
