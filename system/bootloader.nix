@@ -33,7 +33,7 @@
     plymouth = {
       enable = true;
       logo = "${pkgs.nixos-icons}/share/icons/hicolor/48x48/apps/nix-snowflake-white.png";
-      theme = "darth_vader";
+      theme = "tech_b";
       themePackages = with pkgs; [
         (adi1090x-plymouth-themes.override {
           selected_themes = [
