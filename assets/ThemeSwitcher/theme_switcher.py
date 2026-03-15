@@ -5,10 +5,8 @@ import tomllib
 import subprocess
 from pathlib import Path
 from themelibs import (
-    create_kitty_colors,
     create_starship_toml,
     create_wofi_css,
-    create_foot_ini,
     create_mango_conf,
     create_waybar_css,
     create_waybar_config,
@@ -108,6 +106,8 @@ def write_files(theme_name):
 
                 if target is not None:
                     target_path = Path(target).expanduser()
+                    target_dir = target_path.parent
+                    target_dir.mkdir(parents=True, exist_ok=True)
                     try:
                         target_path.unlink()
                     except FileNotFoundError:
