@@ -54,9 +54,9 @@
     }@inputs:
 
     let
-
+      nixpkgsLib = nixpkgs.lib;
       mkDesktop =
-        { hostname }:
+        { hostname, desktopEnvironment }:
         nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           system = "x86_64-linux";
@@ -68,7 +68,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs hostname; };
+              home-manager.extraSpecialArgs = { inherit inputs hostname desktopEnvironment nixpkgsLib; };
               home-manager.users.jtekk = import ./home-manager;
               home-manager.backupFileExtension = "backup";
             }
@@ -78,8 +78,18 @@
     in
     {
       nixosConfigurations = {
-        "deepspace" = mkDesktop { hostname = "deepspace"; };
-        "thinkpad" = mkDesktop { hostname = "thinkpad"; };
+        "deepspace" = mkDesktop {
+          hostname = "deepspace";
+          desktopEnvironment = "mango";
+        };
+        "thinkpad" = mkDesktop {
+          hostname = "thinkpad";
+          desktopEnvironment = "mango";
+        };
+        "sandbox" = mkDesktop {
+          hostname = "sandbox";
+          desktopEnvironment = "kde";
+        }
       };
     };
 }
