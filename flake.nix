@@ -54,11 +54,15 @@
     }@inputs:
 
     let
-      nixpkgsLib = nixpkgs.lib;
       mkDesktop =
         { hostname, desktopEnvironment }:
+        let
+          isMango = desktopEnvironment == "mango";
+          isGaming = hostname == "deepspace";
+          optionals = nixpkgs.lib.optionals;
+        in 
         nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = { inherit inputs isMango isGaming; };
           system = "x86_64-linux";
           modules = [
             disko.nixosModules.disko
@@ -68,7 +72,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs hostname desktopEnvironment nixpkgsLib; };
+              home-manager.extraSpecialArgs = { inherit inputs hostname isMango isGaming optionals;};
               home-manager.users.jtekk = import ./home-manager;
               home-manager.backupFileExtension = "backup";
             }

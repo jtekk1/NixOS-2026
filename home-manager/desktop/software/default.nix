@@ -1,11 +1,13 @@
-{ ... }:
+{ isMango, optionals, ... }:
 
 {
   imports = [
-    ./btop.nix
     ./extras.nix
-    ./kanshi.nix
     ./superfile.nix
+    ./kanshi.nix
+    ./btop.nix
+  ]
+  ++ optionals isMango [
     ./sway-audio-idle-inhibit.nix
     ./swayidle.nix
     ./swaylock.nix

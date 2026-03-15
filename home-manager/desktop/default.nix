@@ -1,11 +1,17 @@
-{ ... }:
+{ isMango, optionals, ... }:
 
 {
   imports = [
-    ./desktop-shell.nix
-    ./mango.nix
-    ./mango-settings
     ./settings
     ./software
+  ]
+  ++ optionals isMango [
+    ./waybar.nix
+    ./desktop-shell.nix
+    ./mango-settings
+    ./mango.nix
+  ]
+  ++ optionals (!isMango) [
+    ./kde.nix
   ];
 }
