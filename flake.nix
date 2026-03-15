@@ -60,9 +60,16 @@
           isMango = desktopEnvironment == "mango";
           isGaming = hostname == "deepspace";
           optionals = nixpkgs.lib.optionals;
-        in 
+        in
         nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs isMango isGaming; };
+          specialArgs = {
+            inherit
+              inputs
+              isMango
+              isGaming
+              optionals
+              ;
+          };
           system = "x86_64-linux";
           modules = [
             disko.nixosModules.disko
@@ -72,7 +79,15 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs hostname isMango isGaming optionals;};
+              home-manager.extraSpecialArgs = {
+                inherit
+                  inputs
+                  hostname
+                  isMango
+                  isGaming
+                  optionals
+                  ;
+              };
               home-manager.users.jtekk = import ./home-manager;
               home-manager.backupFileExtension = "backup";
             }
@@ -93,7 +108,7 @@
         "sandbox" = mkDesktop {
           hostname = "sandbox";
           desktopEnvironment = "kde";
-        }
+        };
       };
     };
 }

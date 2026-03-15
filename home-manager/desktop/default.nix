@@ -6,7 +6,6 @@
     ./software
   ]
   ++ optionals isMango [
-    ./waybar.nix
     ./desktop-shell.nix
     ./mango-settings
     ./mango.nix
