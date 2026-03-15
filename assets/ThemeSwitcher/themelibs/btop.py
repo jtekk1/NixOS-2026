@@ -1,0 +1,52 @@
+def create_btop_theme(config):
+    pc = config["PRIMARY_COLOR"]
+    sc = config["SECONDARY_COLOR"]
+    tc = config["TERTIARY_COLOR"]
+    text = config["TEXT_COLOR"]
+    bg = config["BACKGROUND"]
+    fg = config["FOREGROUND"]
+    sbg = config["SELECTION_BG"]
+    sfg = config["SELECTION_FG"]
+
+    return f"""
+theme[main_bg]="#{bg}"
+theme[main_fg]="#{fg}"
+theme[title]="#{pc}"
+theme[hi_fg]="#{sc}"
+theme[selected_bg]="#{sbg}"
+theme[selected_fg]="#{sfg}"
+theme[inactive_fg]="#{tc}"
+theme[graph_text]="#{text}"
+theme[proc_misc]="#{text}"
+theme[cpu_box]="#{pc}"
+theme[mem_box]="#{pc}"
+theme[net_box]="#{pc}"
+theme[proc_box]="#{pc}"
+theme[div_line]="#{tc}"
+theme[meter_bg]="#{tc}"
+theme[proc_line]="#{text}"
+theme[temp_start]="#{pc}"
+theme[temp_mid]="#{tc}"
+theme[temp_end]="#{sc}"
+theme[cpu_start]="#{pc}"
+theme[cpu_mid]="#{tc}"
+theme[cpu_end]="#{tc}"
+theme[free_start]="#"
+theme[free_mid]="#9E8C6B"
+theme[free_end]="#{fg}"
+theme[cached_start]="#{tc}"
+theme[cached_mid]="#{tc}"
+theme[cached_end]="#{pc}"
+theme[available_start]="#{pc}"
+theme[available_mid]="#{tc}"
+theme[available_end]="#{tc}"
+theme[used_start]="#{pc}"
+theme[used_mid]="#{tc}"
+theme[used_end]="#{tc}"
+theme[download_start]="#{pc}"
+theme[download_mid]="#{tc}"
+theme[download_end]="#{tc}"
+theme[upload_start]="#{pc}"
+theme[upload_mid]="#{tc}"
+theme[upload_end]="#{tc}"
+"""
