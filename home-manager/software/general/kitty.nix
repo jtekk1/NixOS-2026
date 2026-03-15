@@ -13,7 +13,7 @@
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      font_size = 10;
+      font_size = 11;
       symbol_map = "U+23FB-U+23FE,U+2B58,U+E200-U+E2A9,U+E0A0-U+E0A3,U+E0B0-U+E0BF,U+E0C0-U+E0C8,U+E0CC-U+E0CF,U+E0D0-U+E0D2,U+E0D4,U+E700-U+E7C5,U+F000-U+F2E0,U+2665,U+26A1,U+F400-U+F4A8,U+F67C,U+E000-U+E00A,U+F300-U+F313,U+E5FA-U+E62B CaskaydiaCove Nerd Font";
 
       # --- CURSOR --- #
@@ -24,8 +24,8 @@
       cursor_blink_interval = 1;
       cursor_stop_blinking_after = 60.0;
       cursor_trail = 5;
-      cursor_trail_decay = "0.1 0.5";
-      cursor_trail_start_threshold = 2;
+      cursor_trail_decay = "0.05 0.8";
+      cursor_trail_start_threshold = 1;
 
       # --- SCROLLBACK --- #
       scrollback_lines = 2000;
@@ -69,13 +69,12 @@
       scrollback_pager = ''nvim -c "set signcolumn=no showtabline=0" -c "silent write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "'';
 
       # -- Split Navigation --- #
-      allow_remote_control= true;
+      allow_remote_control = true;
       listen_on = "unix:/tmp/mykitty";
       enabled_layouts = "splits";
 
-
     };
-    
+
     keybindings = {
       # Open a vertical split (side-by-side)
       "cmd+d" = "launch --location=vsplit";
@@ -87,8 +86,7 @@
 
       # Close the current split
       "cmd+w" = "close_window";
-      "alt+w" = "close_window"
+      "alt+w" = "close_window";
     };
   };
 }
-
