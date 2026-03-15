@@ -17,8 +17,7 @@
     };
   };
 
-  home.file.".config/waybar/mango-menu.xml".source =
-    config.lib.file.mkOutOfStoreSymlink ./../../assets/waybar/mango-menu.xml;
+  home.file.".config/waybar/mango-menu.xml".source = ./../../../assets/waybar/mango-menu.xml;
   home.file.".config/waybar/style.css".source =
-    config.lib.file.mkOutOfStoreSymlink ./../../assets/waybar/style.css;
+    config.lib.file.mkOutOfStoreSymlink ./../../../assets/waybar/style.css;
 }
