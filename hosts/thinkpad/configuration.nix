@@ -9,15 +9,9 @@
     ./disko.nix
     ./../../system/desktop
     ./../../software
+    ./../../hardware/btop-intel.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "thinkpad";
-
-  security.wrappers.btop = {
-    owner = "root";
-    group = "root";
-    capabilities = "cap_perfmon+ep";
-    source = "${pkgs.btop}/bin/btop";
-  };
 }
