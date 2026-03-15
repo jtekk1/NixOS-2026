@@ -25,8 +25,7 @@
             luks = {
               end = "-4G";
               content = {
-                type = "luks";
-                name = "crypted";
+                type = "filesystem";
                 content = {
                   type = "btrfs";
                   extraArgs = [ "-f" ];
