@@ -9,8 +9,5 @@
     ./desktop-shell.nix
     ./mango-settings
     ./mango.nix
-  ]
-  ++ optionals (!isMango) [
-    ./kde.nix
   ];
 }

@@ -1,4 +1,4 @@
-{ ... }:
+{ isMango, optionals, ... }:
 
 {
   imports = [
@@ -10,5 +10,8 @@
     ./services.nix
     ./snapshots.nix
     ./zram.nix
+  ]
+  ++ optionals (!isMango) [
+    ./kde.nix
   ];
 }

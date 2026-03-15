@@ -23,7 +23,7 @@
               };
             };
             luks = {
-              end = "-4G"
+              end = "-4G";
               content = {
                 type = "luks";
                 name = "crypted";
@@ -123,7 +123,7 @@
                 resumeDevice = true;
                 randomEncryption = true;
               };
-            }
+            };
           };
         };
       };

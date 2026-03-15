@@ -12,6 +12,11 @@
     ./../../hardware/btop-intel.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  specialisation = {
+    ZenKernel.configuration = {
+      boot.kernelPackages = pkgs.linuxPackages_latest;
+    };
+  };
+
   networking.hostName = "sandbox";
 }
